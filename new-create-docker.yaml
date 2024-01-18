@@ -21,7 +21,10 @@ fi
     
     mkdir /home/lamp
     mkdir /home/lamp/{apache_docker,php_docker,www,drupal}
-
+    
+    mkdir -p /home/lamp/drupal/sites/default/files
+    chmod a+w /home/lamp/drupal/sites
+    
 # Downloading scripts from github
     
     # Creates lamp/Docker-compose.yaml
