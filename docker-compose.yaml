@@ -21,7 +21,7 @@ services:
   mariadb:
     image: mariadb:10.11
     environment:
-      MYSQL_ROOT_PASSWORD: your_password
+      MYSQL_ROOT_PASSWORD: Linux4Ever
     volumes:
       - mysqldata:/var/lib/mysql
 
@@ -35,6 +35,28 @@ services:
     depends_on:
       - mariadb
 
+  # Drupal Service
+  drupal:
+    image: drupal:latest
+    depends_on:
+      - mariadb
+    ports:
+      - "8081:80"
+    environment:
+      DRUPAL_DATABASE_HOST: mariadb
+      DRUPAL_DATABASE_NAME: your_drupal_database
+      DRUPAL_DATABASE_USER: your_drupal_user
+      DRUPAL_DATABASE_PASSWORD: your_drupal_password
+    volumes:
+      - ./drupal:/var/www/html/
+
+# Networks
+networks:
+  mynetwork:
+
+
+
 # Volumes
 volumes:
   mysqldata:
+
