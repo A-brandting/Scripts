@@ -20,7 +20,7 @@ fi
 # Creating directory structure
     
     mkdir /home/lamp
-    mkdir /home/lamp/{apache_docker,php_docker,www}
+    mkdir /home/lamp/{apache_docker,php_docker,www,drupal}
 
 # Downloading scripts from github
     
