@@ -45,14 +45,6 @@ fi
     cd /home/lamp
     docker-compose up -d
     docker exec -it lamp-drupal-1 bash
-    compose install
-    cd web
-    cd sites
-    cd default
-    mkdir files
-    chmod a+w sites
-    cp default.settings.php settings.php
-    chmod a+w settings.php
     
     
     
