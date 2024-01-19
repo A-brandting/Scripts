@@ -17,16 +17,3 @@ services:
     volumes:
       - ./ldap-init:/container/service/slapd/assets/config/bootstrap/ldif/custom
       - ./ldap-data:/bitnami/openldap
-
-
-
-
-        --env LDAP_ROOT=dc=mangoflame,dc=com \
-  --env LDAP_ADMIN_USERNAME=ldap_admin \
-  --env LDAP_ADMIN_PASSWORD=Linux4Ever \
-  --env LDAP_ADMIN_DN=cn=ldap_admin,ou=users,dc=mangoflame,dc=com \
-  --env LDAP_USERS=testuser \
-  --env LDAP_PASSWORDS=Linux4Ever \
-  --env LDAP_ALLOW_ANON_BINDING=no\
-  --env LDAP_USER_DC=users\
-  --env LDAP_GROUP_DC=groups\
