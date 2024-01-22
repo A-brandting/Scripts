@@ -44,9 +44,9 @@ services:
       - "8081:80"
     environment:
       DRUPAL_DATABASE_HOST: mariadb
-      DRUPAL_DATABASE_NAME: your_drupal_database
-      DRUPAL_DATABASE_USER: your_drupal_user
-      DRUPAL_DATABASE_PASSWORD: your_drupal_password
+      DRUPAL_DATABASE_NAME: drupal_database
+      DRUPAL_DATABASE_USER: drupal_user
+      DRUPAL_DATABASE_PASSWORD: Linux4Ever
     volumes:
       - ./drupal:/var/www/html/
 
