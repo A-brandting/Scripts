@@ -54,9 +54,7 @@ services:
       - ./drupal:/var/www/html/
       - ./drupal:/opt/drupal/web
 
-# Networks
-networks:
-  mynetwork:
+
 
 
 
