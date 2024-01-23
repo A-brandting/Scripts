@@ -51,7 +51,7 @@ services:
       DRUPAL_DATABASE_USER: drupal_user
       DRUPAL_DATABASE_PASSWORD: Linux4Ever
     volumes:
-  #    - ./drupal:/var/www/html/
+      - ./drupal:/var/www/html/
       - ./drupal:/opt/drupal/web
 
 
