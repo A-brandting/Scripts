@@ -45,7 +45,7 @@ fi
 # Running drupal-script
    touch /home/lamp/drupal/drupal-script.sh
    chmod +x /home/lamp/drupal/drupal-script.sh
-   curl https://raw.githubusercontent.com/A-brandting/Scripts/main/drupal-script.sh >/home/lamp/drupal/drupal-script.sh
+   curl https://raw.githubusercontent.com/A-brandting/Scripts/main/drupal-script.sh > /home/lamp/drupal/drupal-script.sh
    docker exec lamp-drupal-1 /opt/drupal/web/drupal-script.sh
    docker start lamp-drupal-1
 
