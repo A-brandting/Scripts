@@ -25,6 +25,5 @@ apt update
 apt install -y libldap2-dev
 docker-php-ext-configure ldap --with-libdir=lib/x86_64-linux-gnu/
 docker-php-ext-install ldap
-service apache2 restart
 exit
 
