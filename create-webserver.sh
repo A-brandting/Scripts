@@ -19,7 +19,7 @@ fi
 
 #Downloading env-file
 curl https://raw.githubusercontent.com/A-brandting/Scripts/main/secrets.env > /home/lamp/.secrets.env
-chmod 600 .secret.env
+chmod 600 home/lamp/.secrets.env
 
 # Creating directory structure
     
