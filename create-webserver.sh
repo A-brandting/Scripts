@@ -18,7 +18,7 @@ if [ "$(systemctl is-active docker)" != "active" ]; then
 fi
 
 #Downloading env-file
-curl https://raw.githubusercontent.com/A-brandting/Scripts/main/secrets.env > /home/lamp/.secret.env
+curl https://raw.githubusercontent.com/A-brandting/Scripts/main/secrets.env > /home/lamp/.secrets.env
 chmod 600 .secret.env
 
 # Creating directory structure
