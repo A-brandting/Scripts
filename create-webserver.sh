@@ -45,7 +45,7 @@ fi
     curl https://raw.githubusercontent.com/A-brandting/Scripts/main/apache-dockerfile > /home/lamp/apache_docker/Dockerfile
     cd /home/lamp
     
-   docker-compose --env-file ./secrets up -d
+   docker-compose --env-file ./.secrets.env up -d
 
 # Running drupal-script
    touch /home/lamp/drupal/drupal-script.sh
