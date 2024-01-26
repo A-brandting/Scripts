@@ -17,14 +17,15 @@ if [ "$(systemctl is-active docker)" != "active" ]; then
     exit 1
 fi
 
-#Downloading env-file
-curl https://raw.githubusercontent.com/A-brandting/Scripts/main/secrets.env > /home/lamp/.secrets.env
-chmod 600 /home/lamp/.secrets.env
-
 # Creating directory structure
-    
+
     mkdir /home/lamp
     mkdir /home/lamp/{apache_docker,php_docker,www,drupal}
+
+# Downloading env-file
+
+    curl https://raw.githubusercontent.com/A-brandting/Scripts/main/secrets.env > /home/lamp/.secrets.env
+    chmod 600 /home/lamp/.secrets.env
 
 # Downloading scripts from github
     
