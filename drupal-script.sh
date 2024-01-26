@@ -5,7 +5,7 @@ mv /etc/apt/preferences.d/no-debian-php /etc/apt/preferences.d/no-debian-php.bac
 
 # Install Drupal Core
 cd /opt/drupal
-composer install && composer require drupal/ldap_auth
+composer install && composer require 'drupal/ldap:^4.6'
 apt update -y
 apt install php8.2-ldap -y
 
