@@ -27,6 +27,8 @@ services:
       MYSQL_PASSWORD: ${MYSQL_PASSWORD}
     volumes:
       - mysqldata:/var/lib/mysql
+    env_file:
+      - .secrets.env
 
   # phpMyAdmin Service
   phpmyadmin:
@@ -52,6 +54,8 @@ services:
       DRUPAL_DATABASE_PASSWORD: ${DRUPAL_DATABASE_PASSWORD}
     volumes:
       - ./drupal:/var/www/html/
+    env_file:
+      - .secrets.env
 
 # Volumes
 volumes:
