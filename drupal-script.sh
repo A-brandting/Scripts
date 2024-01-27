@@ -28,12 +28,12 @@ docker-php-ext-install ldap
 
 composer require drush/drush
 drush site-install standard \
-  --account-name=drupal_admin \
-  --account-pass=Linux4Ever \
+  --account-name=${DRUPAL_ACCOUNT_NAME} \
+  --account-pass=${DRUPAL_ACCOUNT_PASSWORD} \
   --account-mail=drupal_admin@mangoflame.com \
   --db-url=mysql://${DRUPAL_DATABASE_USER}:${DRUPAL_DATABASE_PASSWORD}@mariadb/${DRUPAL_DATABASE_NAME} \
   --db-su=root \
-  --db-su-pw=Linux4Ever \
+  --db-su-pw=${MYSQL_ROOT_PASSWORD} \
   --locale=en \
   --site-name="Mangoflame" \
   --site-mail=mangoflame.com \
