@@ -31,7 +31,7 @@ drush site-install standard \
   --account-name=drupal_admin \
   --account-pass=Linux4Ever \
   --account-mail=drupal_admin@mangoflame.com \
-  --db-url=mariadb://drupal_user:Linux4Ever@localhost/drupal_database \
+  --db-url=mysql://${DRUPAL_DATABASE_USER}:${DRUPAL_DATABASE_PASSWORD}@mariadb/${DRUPAL_DATABASE_NAME} \
   --db-su=root \
   --db-su-pw=Linux4Ever \
   --locale=en \
