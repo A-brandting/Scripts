@@ -13,6 +13,18 @@ apt install php8.2-ldap -y
 mkdir /opt/drupal/web/sites/default/files
 chmod a+w /opt/drupal/web/sites/default/files
 cp /opt/drupal/web/sites/default/default.settings.php /opt/drupal/web/sites/default/settings.php
+
+echo "$databases['default']['default'] = array(
+  'database' => 'your_database_name',
+  'username' => 'your_database_user',
+  'password' => 'your_database_password',
+  'host' => 'localhost',
+  'port' => '3306',
+  'driver' => 'mysql',
+  'prefix' => '',
+  'collation' => 'utf8mb4_general_ci',
+);" > /opt/drupal/web/sites/default/settings.php
+
 chmod a+w /opt/drupal/web/sites/default/settings.php
 
 # Creates and modifies php.ini
