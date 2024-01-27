@@ -15,18 +15,6 @@ chmod a+w /opt/drupal/web/sites/default/files
 cp /opt/drupal/web/sites/default/default.settings.php /opt/drupal/web/sites/default/settings.php
 chmod a+w /opt/drupal/web/sites/default/settings.php
 
-echo
-"$databases['default']['default'] = array(
-   'database' => 'drupal_database',
-   'username' => 'drupal_user',
-   'password' => 'Linux4Ever',
-   'host' => 'mariadb',
-   'port' => '3306',
-   'driver' => 'mysql',
-   'prefix' => '',
-   'collation' => 'utf8mb4_general_ci',
- );" > /opt/drupal/web/sites/default/settings.php
-
 # Creates and modifies php.ini
 cp /usr/local/etc/php/php.ini-production /usr/local/etc/php/php.ini
 sed -i '927s/;//' /usr/local/etc/php/php.ini
@@ -37,5 +25,17 @@ apt update
 apt install -y libldap2-dev
 docker-php-ext-configure ldap --with-libdir=lib/x86_64-linux-gnu/
 docker-php-ext-install ldap
-exit
+
+composer require drush/drush
+drush site-install standard \
+  --account-name=drupal_admin \
+  --account-pass=Linux4Ever \
+  --account-mail=drupal_admin@mangoflame.com \
+  --db-url=mariadb://drupal_user:Linux4Ever@localhost/drupal_database \
+  --db-su=root \
+  --db-su-pw=Linux4Ever \
+  --locale=en \
+  --site-name="Mangoflame" \
+  --site-mail=mangoflame.com \
+  -y
 
