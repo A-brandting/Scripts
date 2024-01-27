@@ -45,4 +45,3 @@ drush user-add-role administrator --uid=2
 drush cache-rebuild
 
 drush en ldap_servers ldap_user ldap_query ldap_authentication ldap_authorization -y
-service apache2 restart
