@@ -40,7 +40,7 @@ drush site-install standard \
   -y
 
 drush config-set "system.site" name "Mangoflame"
-drush user-create drupal_admin --password="Linux4Ever" --mail="drupal_admin@mangoflame.com"
+drush user-create ${DRUPAL_ACCOUNT_NAME} --password="${DRUPAL_ACCOUNT_PASSWORD}" --mail="drupal_admin@mangoflame.com"
 drush user-add-role administrator --uid=2
 drush cache-rebuild
 
