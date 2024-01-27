@@ -18,7 +18,7 @@ chmod a+w /opt/drupal/web/sites/default/settings.php
 # Creates and modifies php.ini
 cp /usr/local/etc/php/php.ini-production /usr/local/etc/php/php.ini
 sed -i '927s/;//' /usr/local/etc/php/php.ini
-sed -i '928i\extension=php_ldap.so' /usr/local/etc/php/php.ini
+sed -i '928i\extension=ldap.so' /usr/local/etc/php/php.ini
 
 #Install dependencies 
 apt update
