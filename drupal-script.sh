@@ -13,6 +13,7 @@ apt install php8.2-ldap -y
 mkdir /opt/drupal/web/sites/default/files
 chmod a+w /opt/drupal/web/sites/default/files
 cp /opt/drupal/web/sites/default/default.settings.php /opt/drupal/web/sites/default/settings.php
+chmod a+w /opt/drupal/web/sites/default/settings.php
 
 echo
 "$databases['default']['default'] = array(
@@ -25,8 +26,6 @@ echo
    'prefix' => '',
    'collation' => 'utf8mb4_general_ci',
  );" > /opt/drupal/web/sites/default/settings.php
-
-chmod a+w /opt/drupal/web/sites/default/settings.php
 
 # Creates and modifies php.ini
 cp /usr/local/etc/php/php.ini-production /usr/local/etc/php/php.ini
