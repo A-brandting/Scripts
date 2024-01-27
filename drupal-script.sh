@@ -43,3 +43,5 @@ drush config-set "system.site" name "Mangoflame"
 drush user-create drupal_admin --password="Linux4Ever" --mail="drupal_admin@mangoflame.com"
 drush user-add-role administrator --uid=2
 drush cache-rebuild
+
+drush en ldap_servers ldap_user ldap_query ldap_authentication ldap_authorization -y
